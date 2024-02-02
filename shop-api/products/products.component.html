@@ -1,0 +1,63 @@
+<div class="card-top container-fluid" >
+    <div class="container d-flex">
+        <div class="item">
+<a >
+    <img src="https://rukminim2.flixcart.com/image/612/612/kuof5ow0/kids-apparel-combo/j/e/n/6-12-months-kidssuit-blue-celeum-original-imag7qyyqqpkfneh.jpeg?q=70" alt="">
+<h6>All Products</h6>
+
+</a>
+        </div>
+
+
+        <div class="item">
+<a>
+    <img src="https://rukminim2.flixcart.com/image/612/612/kuof5ow0/fabric/7/v/v/no-2-35-m-unstitched-na-heart-fabfiza-original-imag7qyhw2tamhfs.jpeg?q=70" alt="">
+
+<h6>Jewelleary</h6>
+</a>
+        </div>
+
+
+        <div class="item">
+<a>
+    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-lehenga-choli/k/g/s/7-8-years-hc-k-lc21pink006-harshiv-creation-original-imagqwqyykgupv2f.jpeg?q=70" alt="">
+
+<h6>Electronics</h6>
+</a>
+        </div>
+
+        <div class="item">
+<a>
+    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kid-costume-wear/a/j/x/0-0-3-months-rjc-krishna-01-3m-raj-costume-3-original-imagsgvqayxvpage.jpeg?q=70" alt="">
+
+<h6>Fashion</h6>
+</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <h3><strong>product id:</strong> {{item.id}}</h3>
+
+                <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{item.title}}</h3>
+                 <h3><strong>Price: ${{item.price}}</strong></h3>
+                 
+               
+               <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{item.description}}</h3>
+               <h3><strong>Catrgory</strong>: {{item.category}}</h3>
+               <img class="ms-5" src="{{item.image}}" alt="">
+
+               <h3><strong>Ratings</strong>: {{item.rating.rate}}</h3>
+               <h3><strong>Customers buyed so far</strong>: {{item.rating.count}}</h3>
+            <button class="btn btn-primary" (click)="addtoCart(item)">Add to cart</button>
+               
+    
+            </div>
+        </ng-container>
+       
+    </div>
+</div>
